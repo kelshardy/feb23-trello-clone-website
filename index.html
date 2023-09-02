@@ -1,20 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    
+
     <!-- Viewport is needed for some CSS things like flexbox -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="./style.css">
 
     <title>Document</title>
 </head>
+
 <body>
     <!-- Tangent om sending email -->
-    <!-- <a href="mailto:blah@blah.com" >Send email</a> -->
+    <!-- <a href="mailto:blah@blah.com">Send email</a> -->
 
-    <script src="./script.js" ></script>
+    <div class="container">
+
+        <div class="row formRow">
+            <!-- Trello card form and column form -->
+            <div class="column">
+                <!-- Form to create card data -->
+                <form id="cardForm">
+                    <h1>Create a Card:</h1>
+                    <br />
+                    <label for="cardTitle">Card Title:</label>
+                    <input type="text" name="cardTitle" id="cardTitle">
+                    <br />
+                    <label for="cardContent">Card Description Content:</label>
+                    <input type="text" name="cardContent" id="cardContent">
+                    <br />
+                    <button id="cardSubmitButton" type="submit">Update Card Preview</button>
+                </form>
+            </div>
+
+            <div class="column">
+                <!-- Preview of the new card with new data -->
+                <div id="cardPreview" class="trelloCard">
+                    <h3 class="cardDisplay-title">
+                        Fill out the Card Title in the form!
+                    </h3>
+                    <p class="cardDisplay-content">
+                        Write a description in the form!
+                    </p>
+                </div>
+                <!-- div#cardPreview.trelloCard -->
+            </div>
+
+            <div class="column">
+                <!-- Form to create new columns -->
+                <form id="columnForm">
+                    <h1>Create a Column:</h1>
+                    <br />
+                    <label for="columnTitle">Column Title:</label>
+                    <input type="text" name="columnTitle" id="columnTitle">
+                    <br />
+                    <button id="columnSubmitButton" type="submit">Add Column</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row displayRow">
+            <span>Bottom Row</span>
+            <!-- Column & card display section with drag & drop -->
+            <!-- This row is empty on purpose -->
+            
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
 
 </body>
+
 </html>
